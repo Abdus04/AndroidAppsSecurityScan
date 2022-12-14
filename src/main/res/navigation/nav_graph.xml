@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/appListFragement">
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.example.appscan.ScanFragment"
+        android:label="ScanFragment" >
+        <action
+            android:id="@+id/safe_scan"
+            app:destination="@id/safeFragment" />
+        <action
+            android:id="@+id/sus_scan"
+            app:destination="@id/susFragment" />
+        <action
+            android:id="@+id/mal_scan"
+            app:destination="@id/malFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/safeFragment"
+        android:name="com.example.appscan.SafeFragment"
+        android:label="SafeFragment" />
+    <fragment
+        android:id="@+id/appListFragement"
+        android:name="com.example.appscan.appListFragement"
+        android:label="appListFragement" >
+        <action
+            android:id="@+id/init_scan"
+            app:destination="@id/scanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/malFragment"
+        android:name="com.example.appscan.MalFragment"
+        android:label="MalFragment" />
+    <fragment
+        android:id="@+id/susFragment"
+        android:name="com.example.appscan.SusFragment"
+        android:label="SusFragment" />
+</navigation>
